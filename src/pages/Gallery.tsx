@@ -1,14 +1,9 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import PageHero from "@/components/PageHero";
-import heroImg from "@/assets/hero-gym.jpg";
-import equipmentImg from "@/assets/equipment-showroom.jpg";
+
 import galleryImg1 from "@/assets/gym/gallery1.jpeg";
-import galleryImg2 from "@/assets/gallery-2.jpg";
-import galleryImg3 from "@/assets/gallery-3.jpg";
-import galleryImg4 from "@/assets/gallery-4.jpg";
-import training1 from "@/assets/training-1.jpg";
-import training2 from "@/assets/training-2.jpg";
+
 
 import gym1 from "@/assets/gym/gym1.jpeg";
 import gym2 from "@/assets/gym/gym2.jpeg";
@@ -23,21 +18,32 @@ import gym10 from "@/assets/gym/gym10.jpeg";
 
 
 
-const categories = ["All", "Training Floor", "Studios", "Recovery", "Lounge"];
-
+const categories = [
+  "All",
+  "Strength Zone",
+  "Cardio Zone",
+  "Free Weights",
+  "Machines"
+];
 const images = [
-  { src: galleryImg1, category: "Training Floor", title: "Main Training Hall" },
-  { src: gym1, category: "Cardio", title: "CrossFit Area" },
-  { src: gym2, category: "Cardio", title: "TreadMill area" },
-  { src: gym3, category: "Leg Traning", title: "Leg Push" },
-  { src: gym4, category: "Leg Traning", title: "Squats" },
-  { src: gym5, category: "Leg Traning", title: "Squats" },
-  { src: gym6, category: "Leg Traning", title: "Squats" },
-  { src: gym7, category: "Leg Traning", title: "Squats" },
-  { src: gym8, category: "Leg Traning", title: "Squats" },
-  { src: gym9, category: "Leg Traning", title: "Squats" },
-  { src: gym10, category: "Leg Traning", title: "Squats" },
+  { src: galleryImg1, category: "Strength Zone", title: "Main Training Floor" },
 
+  { src: gym1, category: "Cardio Zone", title: "CrossFit Training Area" },
+  { src: gym2, category: "Cardio Zone", title: "Treadmill Cardio Section" },
+
+  { src: gym3, category: "Machines", title: "Leg Press Machine" },
+  { src: gym4, category: "Strength Zone", title: "Squat Rack Station" },
+
+  { src: gym5, category: "Machines", title: "Bench Press Machine" },
+  { src: gym6, category: "Machines", title: "Lat Pulldown Machine" },
+
+  { src: gym7, category: "Machines", title: "Lat Machine" },
+
+  { src: gym8, category: "Free Weights", title: "Bicep Curl Training" },
+
+  { src: gym9, category: "Free Weights", title: "Dumbbell Row Area" },
+
+  { src: gym10, category: "Machines", title: "Pec Fly Machine" },
 ];
 
 const Gallery = () => {

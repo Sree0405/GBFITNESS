@@ -30,7 +30,13 @@ const socials = [
   { icon: Youtube, label: "YouTube" },
   { icon: Facebook, label: "Facebook" },
 ];
-
+const developer = {
+  name: "Sreekanth",
+  role: "Software Engineer",
+  portfolio: "https://sreefolio.vercel.app/",
+  linkedin: "http://linkedin.com/in/sreekanth04052005/",
+  phone: "+91 9363965927"
+};
 const Footer = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });
@@ -132,15 +138,58 @@ const Footer = () => {
 
         <div className="divider-crimson mt-12 mb-6" />
 
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="font-body text-xs text-muted-foreground">
-            © 2026 GB Fitness Fitness. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            <a href="#" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="font-body text-xs text-muted-foreground hover:text-primary transition-colors">Terms of Service</a>
-          </div>
-        </div>
+<div className="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+
+  {/* Gym Copyright */}
+  <p className="font-body text-xs text-muted-foreground">
+    © 2026 GB Fitness Studio. All rights reserved.
+  </p>
+
+  {/* Developer Credits */}
+  <div className="font-body text-xs text-muted-foreground flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+
+    <span>
+      Designed & Developed by{" "}
+      <span className="text-primary font-semibold">
+        {developer.name}
+      </span>
+    </span>
+
+    <span className="hidden sm:inline">|</span>
+
+    <span className="text-muted-foreground/80">
+      {developer.role}
+    </span>
+
+    <span className="hidden sm:inline">|</span>
+
+    <a
+      href={developer.portfolio}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-primary transition-colors"
+    >
+      Portfolio
+    </a>
+
+    <span className="hidden sm:inline">|</span>
+
+    <a
+      href={developer.linkedin}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-primary transition-colors"
+    >
+      LinkedIn
+    </a>
+
+    <span className="hidden sm:inline">|</span>
+
+    <span>{developer.phone}</span>
+
+  </div>
+
+</div>
       </div>
     </footer>
   );

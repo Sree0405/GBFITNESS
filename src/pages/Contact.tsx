@@ -14,10 +14,10 @@ const ContactPage = () => {
   return (
     <div>
       <PageHero
-        eyebrow="Get In Touch"
-        title="Begin Your"
-        titleAccent="Transformation"
-        description="Book a free consultation and experience the GB Fitness difference. Our team is ready to help you achieve your goals."
+        eyebrow="Contact GB Fitness"
+        title="Start Your"
+        titleAccent="Fitness Journey"
+        description="Join GB Fitness Studio in Avadi and train in a motivating environment with expert trainers, modern equipment, and personalized workout plans."
       />
 
       <section className="section-padding pt-0">
@@ -52,9 +52,12 @@ const ContactPage = () => {
                 <select value={formData.interest} onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
                   className="w-full bg-secondary border border-border px-4 py-3 font-body text-sm text-foreground focus:border-primary focus:outline-none transition-colors">
                   <option value="">Select an option</option>
-                  <option value="membership">Membership</option>
+                  <option value="membership">Gym Membership</option>
+                  <option value="90days-program">90 Days Program</option>
+                  <option value="weight-loss">Weight Loss Program</option>
+                  <option value="muscle-gain">Muscle Gain Training</option>
                   <option value="personal-training">Personal Training</option>
-                  <option value="group-classes">Group Classes</option>
+                  <option value="group-training">Group Training</option>
                 </select>
               </div>
             </div>
@@ -77,10 +80,25 @@ const ContactPage = () => {
           >
             {/* Contact Info */}
             {[
-              { icon: MapPin, title: "Location", lines: ["No: 4, OM SAKTHI COMPLEX, 1st Main Rd, JB Estate", "Avadi, Tamil Nadu 600054"] },
-              { icon: Phone, title: "Phone", lines: ["09841522297"] },
-              { icon: Mail, title: "Email", lines: ["gbfitness@gmail.com"] },
-              { icon: Clock, title: "Hours", lines: ["Mon–Fri: 5AM – 11PM", "Sat–Sun: 6AM – 10PM"] },
+              {
+                icon: MapPin,
+                title: "Location",
+                lines: [
+                  "No.04, JB Estate, 1st Main Road",
+                  "Avadi, Chennai - 600054",
+                  "Near Om Shakthi Temple",
+                ],
+              },
+              {
+                icon: Phone,
+                title: "Phone",
+                lines: ["98415 22297", "73053 36027"],
+              },
+              {
+                icon: Clock,
+                title: "Hours",
+                lines: ["Mon – Sat: 5:30 AM – 10:30 PM", "Sunday: 6:00 AM – 12:00 PM"],
+              },
             ].map((item) => (
               <div key={item.title} className="flex gap-4 items-start">
                 <div className="w-12 h-12 glass-panel flex items-center justify-center flex-shrink-0">

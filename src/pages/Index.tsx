@@ -12,32 +12,60 @@ import gallery1 from "@/assets/gym/gallery1.jpeg";
 import gallery2 from "@/assets/gym/gallery2.jpeg";
 import gallery3 from "@/assets/gym/gallery3.jpeg";
 
-import { Dumbbell, Flame, Zap, Heart, User, Star, Quote, ArrowRight } from "lucide-react";
+import { Dumbbell, Flame, Zap, Heart, User, Star, Quote, ArrowRight, TrendingUp, Award, Users, Target } from "lucide-react";
 import videos from "@/assets/Testvideo.mp4"
 const programs = [
-  { icon: Dumbbell, title: "Strength Training", desc: "Build raw power with precision programming." },
-  { icon: Flame, title: "Fat Loss", desc: "Science-backed body recomposition protocols." },
-  { icon: Zap, title: "Athletic Performance", desc: "Sport-specific speed, power, and agility." },
+  {
+    icon: Target,
+    title: "90 Days Transformation",
+    desc: "Our signature transformation program designed for weight loss, muscle gain, and full body transformation with expert coaching and diet planning.",
+  },  
+  {
+    icon: Dumbbell,
+    title: "Strength Training",
+    desc: "Our structured strength training program helps you build muscle, improve endurance, and increase overall power using free weights, machines, and progressive overload techniques.",
+  },
+  {
+    icon: Flame,
+    title: "Weight Loss Program",
+    desc: "A results-driven fat loss program combining strength training, cardio workouts, and diet guidance to help you burn fat and transform your body safely.",
+    features: [
+      "Fat loss workouts",
+      "Cardio training routines",
+      "Customized diet chart"
+    ],
+  }
 ];
 
+
 const stats = [
-  { value: "200+", label: "Members" },
-  { value: "98%", label: "Retention" },
-  { value: "15+", label: "Elite Trainers" },
-  { value: "50K+", label: "Sessions" },
+  { icon: TrendingUp, value: "50+", label: "Member Transformations" },
+  { icon: Award, value: "90 Days", label: "Transformation Programs" },
+  { icon: Users, value: "400+", label: "Active Members" },
+  { icon: Star, value: "5/5", label: "Member Satisfaction" },
 ];
 
 const testimonials = [
-  { name: "Marcus Chen", role: "CEO, TechVenture", quote: "GB Fitness transformed not just my body, but my entire approach to performance." },
-  { name: "Sarah Williams", role: "Professional Athlete", quote: "The training methodologies and recovery technology are world-class." },
+  {
+    name: "Gym Member",
+    role: "Weight Loss Program",
+    quote:
+      "I lost weight and improved my fitness with the help of trainers at GB Fitness Studio. The workouts and diet guidance really helped.",
+  },
+  {
+    name: "Transformation Member",
+    role: "Strength Training",
+    quote:
+      "Great environment and supportive trainers. The gym helped me become stronger and more confident.",
+  },
 ];
 
 const Index = () => {
   return (
     <div>
       {/* Hero */}
-<section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden px-4">
-          <div className="absolute inset-0">
+      <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden px-4">
+        <div className="absolute inset-0">
           {/* <iframe src={videos} title="GB Fitness Promo" className="w-full h-full object-cover" /> */}
           <img src={gallery1} alt="GB Fitness Fitness" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
@@ -46,15 +74,14 @@ const Index = () => {
         <div className="relative z-10 text-center sm:pt-8 px-6 max-w-5xl">
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             className="font-body text-sm tracking-[0.4em] uppercase text-primary mb-6">
-            Premium Fitness Experience
+            Avadi's Transformation Gym
           </motion.p>
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
-className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold uppercase leading-[0.9] tracking-tight">            Redefine<br /><span className="text-gradient-crimson">Your Strength</span>
+            className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold uppercase leading-[0.9] tracking-tight">            Transform <br /><span className="text-gradient-crimson">Your Body</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}
             className="mt-6 sm:mt-8 font-body text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl sm:max-w-2xl mx-auto px-2">
-            Where elite performance begins. Premium training, world-class equipment, and results that speak for themselves.
-          </motion.p>
+Train at GB Fitness Studio with expert trainers, modern equipment, and structured workout programs designed for real body transformation.          </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.7 }}
             className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
             <Link to="/membership"
@@ -81,10 +108,11 @@ className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl
               More Than A <span className="text-gradient-crimson">Gym</span>
             </h2>
             <p className="font-body text-muted-foreground leading-relaxed mb-4">
-              GB Fitness Fitness is an elite performance center designed for professionals, athletes, and executives who demand excellence. Our state-of-the-art facility combines cutting-edge technology with expert coaching to deliver transformative results.
-            </p>
+GB Fitness Studio is one of the fastest growing fitness centers in Avadi, Chennai. 
+We help members achieve real body transformations through structured strength training, cardio workouts, and expert guidance.
+</p>
             <p className="font-body text-muted-foreground leading-relaxed mb-8">
-              From private training studios to advanced recovery pods, every detail is engineered for peak performance. This isn't just fitness — it's a lifestyle commitment to becoming your best self.
+Our gym is equipped with modern training equipment and experienced trainers who support members in weight loss, muscle gain, and overall fitness improvement.           
             </p>
             <Link to="/programs" className="inline-flex items-center gap-2 font-heading text-sm tracking-wider uppercase text-primary hover:gap-4 transition-all duration-300">
               Discover Our Programs <ArrowRight className="w-4 h-4" />
@@ -97,14 +125,18 @@ className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl
                 <img src={gallery2} alt="Training" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="glass-panel p-6 text-center">
-                <p className="font-heading text-3xl font-bold text-primary">1+</p>
-                <p className="font-body text-xs text-muted-foreground uppercase tracking-wider mt-1">Years Experience</p>
+                <p className="font-heading text-lg font-semibold text-primary">Elite Coaching</p>
+                <p className="font-body text-xs text-muted-foreground mt-2 leading-relaxed">
+                  Certified trainers dedicated to strength, conditioning and peak performance.
+                </p>
               </div>
             </div>
             <div className="space-y-4 pt-8">
               <div className="glass-panel p-6 text-center">
-                <p className="font-heading text-3xl font-bold text-primary">24/7</p>
-                <p className="font-body text-xs text-muted-foreground uppercase tracking-wider mt-1">Access</p>
+                <p className="font-heading text-lg font-semibold text-primary">Premium Equipment</p>
+                <p className="font-body text-xs text-muted-foreground mt-2 leading-relaxed">
+                  Train with industry-leading machines built for performance and recovery.
+                </p>
               </div>
               <div className="overflow-hidden aspect-[4/5] sm:aspect-[3/4]">
                 <img src={gallery3} alt="Training" className="w-full object-top h-full object-cover hover:scale-105 transition-transform duration-700" />
@@ -151,13 +183,14 @@ className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl
       <section className="section-padding">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((s, i) => (
-              <motion.div key={s.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }} className="text-center glass-panel p-8">
-                <p className="font-heading text-4xl md:text-5xl font-bold text-primary">{s.value}</p>
-                <p className="font-body text-sm text-muted-foreground mt-2 uppercase tracking-wider">{s.label}</p>
-              </motion.div>
-            ))}
+          {stats.map((s, i) => (
+            <motion.div key={s.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }} className="text-center glass-panel p-8">
+              <s.icon className="w-6 h-6 text-primary mx-auto mb-3" />
+              <p className="font-heading text-3xl md:text-4xl font-bold text-primary">{s.value}</p>
+              <p className="font-body text-xs text-muted-foreground mt-2 uppercase tracking-wider">{s.label}</p>
+            </motion.div>
+          ))}
           </div>
         </div>
       </section>
@@ -234,15 +267,14 @@ className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="font-heading text-5xl md:text-6xl font-bold uppercase mb-6">
-              Ready To <span className="text-gradient-crimson">Begin?</span>
+              Start Your <span className="text-gradient-crimson">Fitness Journey</span>
             </h2>
             <p className="font-body text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Take the first step toward your transformation. Book a free consultation and experience the GB Fitness difference.
-            </p>
+Join GB Fitness Studio in Avadi and begin your transformation with expert trainers, professional equipment, and a motivating fitness community.            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact"
                 className="px-10 py-4 bg-primary text-primary-foreground font-heading text-sm tracking-wider uppercase hover:bg-primary/90 transition-all duration-300 animate-pulse-glow">
-                Book Free Trial
+                Join GB Fitness
               </Link>
               <Link to="/membership"
                 className="px-10 py-4 border border-foreground/20 text-foreground font-heading text-sm tracking-wider uppercase hover:border-primary/50 hover:text-primary transition-all duration-300">

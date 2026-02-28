@@ -4,32 +4,88 @@ import PageHero from "@/components/PageHero";
 import { Star, Quote, ArrowRight, TrendingUp, Award, Users } from "lucide-react";
 import training1 from "@/assets/training-1.jpg";
 import training2 from "@/assets/training-2.jpg";
+import Ctasection from "@/components/ctasection";
 
-const testimonials = [
-  { name: "Marcus Chen", role: "CEO, TechVenture", quote: "GB Fitness transformed not just my body, but my entire approach to performance. The private coaching is unmatched.", rating: 5 },
-  { name: "Sarah Williams", role: "Professional Athlete", quote: "The training methodologies and recovery technology here are world-class. I've seen a 30% improvement in my performance.", rating: 5 },
-  { name: "David Ross", role: "Investment Director", quote: "In 6 months, I achieved what I couldn't in 5 years elsewhere. The executive fitness program fits perfectly into my schedule.", rating: 5 },
-  { name: "Elena Rodriguez", role: "Marathon Runner", quote: "The athletic performance program gave me the edge I needed. My marathon time dropped by 15 minutes in just 3 months.", rating: 5 },
-  { name: "James Park", role: "Entrepreneur", quote: "The combination of personal training and nutrition guidance has been life-changing. I feel 10 years younger.", rating: 5 },
-  { name: "Lisa Thompson", role: "Corporate Executive", quote: "As a busy executive, I need efficiency. GB Fitness delivers maximum results in every single session.", rating: 5 },
+import result1 from "@/assets/Results/result1.jpg"
+import result2 from "@/assets/Results/result2.jpg"
+import result3 from "@/assets/Results/result3.jpg"
+import result4 from "@/assets/Results/result4.jpg"
+import result5 from "@/assets/Results/result5.jpg"
+import result6 from "@/assets/Results/result6.jpg"
+
+const transformations = [
+  {
+    name: "Member Transformation",
+    program: "Weight Loss Program",
+    beforeWeight: "99.8 kg",
+    afterWeight: "91.4 kg",
+    duration: "30 Days",
+    desc: "Focused strength training and cardio helped achieve visible fat loss and improved fitness.",
+    image: result1,
+  },
+  {
+    name: "Member Transformation",
+    program: "Strength Training",
+    beforeWeight: "Before",
+    afterWeight: "After",
+    duration: "60 Days",
+    desc: "Consistent strength workouts and discipline resulted in improved muscle definition and body composition.",
+    image: result2,
+  },
+  {
+    name: "Member Transformation",
+    program: "Weight Loss Program",
+    beforeWeight: "104.6 kg",
+    afterWeight: "97.0 kg",
+    duration: "60 Days",
+    desc: "Structured training and nutrition guidance helped achieve significant fat loss and improved endurance.",
+    image: result3,
+  },
+  {
+    name: "Member Transformation",
+    program: "Fitness Transformation",
+    beforeWeight: "110.1 kg",
+    afterWeight: "104.6 kg",
+    duration: "60 Days",
+    desc: "Lifestyle changes and gym training helped build strength and improve overall physique.",
+    image: result4,
+  },
+  {
+    name: "Member Transformation",
+    program: "Weight Loss Program",
+    beforeWeight: "Before",
+    afterWeight: "After",
+    duration: "60 Days",
+    desc: "Cardio, strength training, and diet discipline helped achieve consistent weight reduction.",
+    image: result5,
+  },
+    {
+    name: "Member Transformation",
+    program: "Weight Loss Program",
+    beforeWeight: "88.2 kg",
+    afterWeight: "84.5 kg",
+    duration: "30 Days",
+    desc: "Cardio, strength training, and diet discipline helped achieve consistent weight reduction.",
+    image: result6,
+  },
 ];
 
 const stats = [
-  { icon: TrendingUp, value: "2,500+", label: "Transformations" },
-  { icon: Award, value: "98%", label: "Goal Achievement" },
-  { icon: Users, value: "15+", label: "Elite Trainers" },
-  { icon: Star, value: "4.9/5", label: "Member Rating" },
+  { icon: TrendingUp, value: "50+", label: "Member Transformations" },
+  { icon: Award, value: "90 Days", label: "Transformation Programs" },
+  { icon: Users, value: "400+", label: "Active Members" },
+  { icon: Star, value: "5/5", label: "Member Satisfaction" },
 ];
 
 const Results = () => {
   return (
     <div>
-      <PageHero
-        eyebrow="Proven Results"
-        title="Success"
-        titleAccent="Stories"
-        description="Real members, real transformations, real results. See what's possible with GB Fitness."
-      />
+<PageHero
+  eyebrow="Transformation Results"
+  title="Real People."
+  titleAccent="Real Results."
+  description="At GB Fitness Studio, we focus on real body transformations through strength training, fat loss programs, and expert coaching."
+/>
 
       {/* Stats */}
       <section className="px-6 md:px-12 pb-20">
@@ -45,58 +101,90 @@ const Results = () => {
         </div>
       </section>
 
-      {/* Images + Testimonials */}
-      <section className="section-padding pt-0">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-1 grid grid-cols-2 lg:grid-cols-1 gap-4">
-            <div className="relative overflow-hidden aspect-[3/4]">
-              <img src={training1} alt="Transformation" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-            </div>
-            <div className="relative overflow-hidden aspect-[3/4]">
-              <img src={training2} alt="Transformation" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-            </div>
-          </div>
+{/* Transformation Results */}
+<section className="section-padding pt-0">
+  <div className="max-w-7xl mx-auto">
 
-          <div className="lg:col-span-2 space-y-6">
-            {testimonials.map((t, i) => (
-              <motion.div key={t.name} initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }} className="glass-panel p-8">
-                <Quote className="w-6 h-6 text-primary/40 mb-4" />
-                <p className="font-body text-foreground/90 leading-relaxed mb-6">{t.quote}</p>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="font-heading text-sm font-semibold uppercase tracking-wider">{t.name}</p>
-                    <p className="font-body text-xs text-muted-foreground mt-1">{t.role}</p>
-                  </div>
-                  <div className="flex gap-1">
-                    {Array.from({ length: t.rating }).map((_, j) => (
-                      <Star key={j} className="w-4 h-4 fill-primary text-primary" />
-                    ))}
-                  </div>
+    <h2 className="font-heading text-3xl md:text-4xl font-bold uppercase text-center mb-16">
+      Member <span className="text-gradient-crimson">Transformations</span>
+    </h2>
+
+    <div className="space-y-12">
+
+      {transformations.map((t, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: i * 0.08 }}
+          className="glass-panel p-6 md:p-8"
+        >
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+
+            {/* Image */}
+            <div className="overflow-hidden rounded-lg">
+              <img
+                src={t.image}
+                alt="Transformation"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Content */}
+            <div>
+
+              <p className="text-primary text-xs uppercase tracking-wider mb-2">
+                {t.program}
+              </p>
+
+              <h3 className="font-heading text-2xl font-bold uppercase mb-4">
+                {t.name}
+              </h3>
+
+              <div className="flex items-center gap-6 mb-4">
+
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase">
+                    Before
+                  </p>
+                  <p className="text-xl font-bold">{t.beforeWeight}</p>
                 </div>
-              </motion.div>
-            ))}
+
+                <div className="text-primary font-bold text-xl">→</div>
+
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase">
+                    After
+                  </p>
+                  <p className="text-xl font-bold text-primary">
+                    {t.afterWeight}
+                  </p>
+                </div>
+
+              </div>
+
+              <p className="text-sm text-muted-foreground mb-4">
+                Duration: <span className="text-foreground font-semibold">{t.duration}</span>
+              </p>
+
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {t.desc}
+              </p>
+
+            </div>
+
           </div>
-        </div>
-      </section>
+        </motion.div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
 
       {/* CTA */}
-      <section className="section-padding">
-        <div className="max-w-3xl mx-auto text-center glass-panel p-12">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold uppercase mb-4">
-            Your Story Starts Here
-          </h2>
-          <p className="font-body text-muted-foreground mb-8">
-            Join the hundreds who have already transformed their lives at GB Fitness.
-          </p>
-          <Link to="/contact"
-            className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-primary-foreground font-heading text-sm tracking-wider uppercase hover:bg-primary/90 transition-colors">
-            Begin Your Transformation <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
+      <Ctasection/>
     </div>
   );
 };

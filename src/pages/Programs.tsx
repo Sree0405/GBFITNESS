@@ -2,28 +2,93 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import { Dumbbell, Flame, Zap, Heart, User, Target, ArrowRight } from "lucide-react";
+import Ctasection from "@/components/ctasection";
 
 const programs = [
-  { icon: Dumbbell, title: "Strength Training", desc: "Build raw power with progressive overload programming, Olympic lifts, and periodized strength cycles designed by certified strength coaches.", features: ["Personalized programming", "Form analysis", "Progressive tracking"] },
-  { icon: Flame, title: "Fat Loss", desc: "Science-backed body recomposition combining HIIT, metabolic conditioning, and nutrition protocols for sustainable results.", features: ["Metabolic testing", "Meal planning", "Weekly check-ins"] },
-  { icon: Zap, title: "CrossFit", desc: "High-intensity functional training that builds endurance, strength, and mental toughness in a competitive group environment.", features: ["Daily WODs", "Skill progressions", "Community events"] },
-  { icon: Target, title: "Athletic Performance", desc: "Sport-specific speed, agility, and power training for competitive athletes looking to gain a measurable edge.", features: ["Movement screening", "Speed training", "Recovery protocols"] },
-  { icon: Heart, title: "Weight Management", desc: "Sustainable approaches to body composition with medical-grade body scanning and ongoing accountability coaching.", features: ["InBody scanning", "Habit coaching", "Support groups"] },
-  { icon: User, title: "Private Coaching", desc: "One-on-one sessions with certified elite trainers in private studios, fully customized to your schedule and goals.", features: ["Dedicated trainer", "Flexible scheduling", "Private studio"] },
+  {
+    icon: Target,
+    title: "90 Days Transformation",
+    desc: "Our signature transformation program designed for weight loss, muscle gain, and full body transformation with expert coaching and diet planning.",
+    features: [
+      "Customized diet plan",
+      "Strength + cardio training",
+      "Progress monitoring"
+    ],
+  },  
+  {
+    icon: Dumbbell,
+    title: "Strength Training",
+    desc: "Our structured strength training program helps you build muscle, improve endurance, and increase overall power using free weights, machines, and progressive overload techniques.",
+    features: [
+      "Machine & free weight training",
+      "Muscle building programs",
+      "Progress tracking guidance"
+    ],
+  },
+  {
+    icon: Flame,
+    title: "Weight Loss Program",
+    desc: "A results-driven fat loss program combining strength training, cardio workouts, and diet guidance to help you burn fat and transform your body safely.",
+    features: [
+      "Fat loss workouts",
+      "Cardio training routines",
+      "Customized diet chart"
+    ],
+  },
+  {
+    icon: Zap,
+    title: "CrossFit Training",
+    desc: "High-intensity functional training designed to improve strength, endurance, agility, and conditioning through dynamic workouts.",
+    features: [
+      "Functional workouts",
+      "High-intensity circuits",
+      "Strength & endurance training"
+    ],
+  },
+  {
+    icon: Target,
+    title: "Strength + Cardio Training",
+    desc: "A balanced fitness program combining weight training and cardiovascular exercises to improve stamina, burn calories, and build lean muscle.",
+    features: [
+      "Strength workouts",
+      "Cardio sessions",
+      "Fat burning training"
+    ],
+  },
+  {
+    icon: Heart,
+    title: "Mobility & Flexibility Training",
+    desc: "Improve joint mobility, flexibility, and injury prevention with guided stretching, functional movements, and recovery exercises.",
+    features: [
+      "Mobility drills",
+      "Flexibility improvement",
+      "Injury prevention routines"
+    ],
+  },
+  {
+    icon: User,
+    title: "Personal Training",
+    desc: "Train one-on-one with certified fitness trainers who design personalized workout plans based on your fitness goals and body type.",
+    features: [
+      "Dedicated trainer",
+      "Customized workout plan",
+      "Form correction & progress tracking"
+    ],
+  }
 ];
 
 const Programs = () => {
   return (
     <div>
       <PageHero
-        eyebrow="Our Programs"
-        title="Engineered For"
-        titleAccent="Excellence"
-        description="Every program is built on science, delivered with precision, and designed for measurable transformation."
+        eyebrow="Our Training Programs"
+        title="Train Hard."
+        titleAccent="Transform Faster."
+        description="GB Fitness Studio offers professional training programs designed for weight loss, muscle gain, strength building, and complete body transformation."
       />
 
       <section className="section-padding pt-0">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {programs.map((p, i) => (
             <motion.div
               key={p.title}
@@ -51,20 +116,7 @@ const Programs = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding">
-        <div className="max-w-3xl mx-auto text-center glass-panel p-12">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold uppercase mb-4">
-            Not Sure Which Program?
-          </h2>
-          <p className="font-body text-muted-foreground mb-8">
-            Book a free consultation and our team will recommend the perfect program for your goals.
-          </p>
-          <Link to="/contact"
-            className="inline-flex items-center gap-2 px-10 py-4 bg-primary text-primary-foreground font-heading text-sm tracking-wider uppercase hover:bg-primary/90 transition-colors">
-            Schedule Consultation <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
+      <Ctasection/>
     </div>
   );
 };
