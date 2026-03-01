@@ -25,7 +25,7 @@ const moreLinks = [
 ];
 
 const socials = [
-  { icon: Instagram, label: "Instagram" },
+  { icon: Instagram, label: "Instagram" ,route:"https://www.instagram.com/gb_fitness_studio_avadi"},
   { icon: Twitter, label: "Twitter" },
   { icon: Youtube, label: "YouTube" },
   { icon: Facebook, label: "Facebook" },
@@ -67,7 +67,7 @@ const Footer = () => {
               {socials.map((s) => (
                 <a
                   key={s.label}
-                  href="#"
+                  href={s.route}
                   aria-label={s.label}
                   className="w-9 h-9 glass-panel-hover flex items-center justify-center"
                 >

@@ -120,23 +120,23 @@ Our gym is equipped with modern training equipment and experienced trainers who 
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
             className="grid grid-cols-2 gap-3 sm:gap-4">
-            <div className="space-y-4">
+            <div className="flex flex-col justify-between">
               <div className="overflow-hidden aspect-[4/5] sm:aspect-[3/4]">
                 <img src={gallery2} alt="Training" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="glass-panel p-6 text-center">
                 <p className="font-heading text-lg font-semibold text-primary">Elite Coaching</p>
-                <p className="font-body text-xs text-muted-foreground mt-2 leading-relaxed">
+                {/* <p className="font-body text-xs text-muted-foreground mt-2 leading-relaxed">
                   Certified trainers dedicated to strength, conditioning and peak performance.
-                </p>
+                </p> */}
               </div>
             </div>
-            <div className="space-y-4 pt-8">
+            <div className="flex flex-col justify-between">
               <div className="glass-panel p-6 text-center">
                 <p className="font-heading text-lg font-semibold text-primary">Premium Equipment</p>
-                <p className="font-body text-xs text-muted-foreground mt-2 leading-relaxed">
+                {/* <p className="font-body text-xs text-muted-foreground mt-2 leading-relaxed">
                   Train with industry-leading machines built for performance and recovery.
-                </p>
+                </p> */}
               </div>
               <div className="overflow-hidden aspect-[4/5] sm:aspect-[3/4]">
                 <img src={gallery3} alt="Training" className="w-full object-top h-full object-cover hover:scale-105 transition-transform duration-700" />
@@ -182,7 +182,7 @@ Our gym is equipped with modern training equipment and experienced trainers who 
       {/* Stats */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid  md:grid-cols-4 gap-6">
           {stats.map((s, i) => (
             <motion.div key={s.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ delay: i * 0.1 }} className="text-center glass-panel p-8">
@@ -247,16 +247,32 @@ Our gym is equipped with modern training equipment and experienced trainers who 
               World-Class <span className="text-gradient-crimson">Space</span>
             </h2>
           </motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="relative overflow-hidden aspect-[21/9]">
-            <img src={gallery1} alt="Facility" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
-            <div className="absolute bottom-8 left-8">
-              <Link to="/gallery" className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-heading text-sm tracking-wider uppercase hover:bg-primary/90 transition-colors">
-                Explore Gallery <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  className="relative overflow-hidden rounded-xl h-[280px] sm:h-[380px] md:h-[450px]"
+>
+  <img
+    src={gallery1}
+    alt="Facility"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+
+  <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+
+  <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 md:bottom-8 md:left-8">
+    <Link
+      to="/gallery"
+      className="inline-flex items-center gap-2 px-5 py-2 sm:px-6 sm:py-3 md:px-8 md:py-3 
+      bg-primary text-primary-foreground font-heading text-xs sm:text-sm 
+      tracking-wider uppercase hover:bg-primary/90 transition-colors rounded-md"
+    >
+      Explore Gallery
+      <ArrowRight className="w-4 h-4" />
+    </Link>
+  </div>
+</motion.div>
         </div>
       </section>
 
