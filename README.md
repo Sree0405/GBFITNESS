@@ -1,5 +1,9 @@
 # GB FITNESS - Premium Gym & Fitness Website
 
+**Live url:** [https://gbfitnessstudioavadi.in/](https://gbfitnessstudioavadi.in/)
+
+---
+
 ## Project Overview
 
 **GB FITNESS** is a premium, elite-level gym and fitness center website designed for professionals, athletes, and executives who demand excellence. This is a modern, high-performance web application built with React and TypeScript, featuring a dark, sophisticated design aesthetic with vibrant green accent colors. The website showcases world-class fitness facilities, training programs, equipment, member testimonials, and comprehensive membership options.
