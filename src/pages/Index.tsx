@@ -67,7 +67,11 @@ const Index = () => {
       <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden px-4">
         <div className="absolute inset-0">
           {/* <iframe src={videos} title="GB Fitness Promo" className="w-full h-full object-cover" /> */}
-          <img src={gallery1} alt="GB Fitness Fitness" className="w-full h-full object-cover" />
+          <img
+            src={gallery1}
+            alt="GB Fitness Avadi gym floor and training area at GB Fitness Studio Avadi, Chennai"
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
           <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-transparent to-background/40" />
         </div>
@@ -76,8 +80,17 @@ const Index = () => {
             className="font-body text-sm tracking-[0.4em] uppercase text-primary mb-6">
             Avadi's Transformation Gym
           </motion.p>
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold uppercase leading-[0.9] tracking-tight">            Transform <br /><span className="text-gradient-crimson">Your Body</span>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold uppercase leading-[0.9] tracking-tight"
+          >
+            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.15em] text-foreground/90 mb-2 md:mb-3">
+              GB Fitness Avadi
+            </span>
+            Transform <br />
+            <span className="text-gradient-crimson">Your Body</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}
             className="mt-6 sm:mt-8 font-body text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl sm:max-w-2xl mx-auto px-2">

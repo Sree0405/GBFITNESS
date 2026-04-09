@@ -23,8 +23,8 @@ const faqs = [
 ];
 const transformationPlan = {
   name: "90 Days Transformation",
-  price: "₹14,999",
-  period: "/90 days",
+  price: "₹18,000",
+  period: "/3 months",
   desc: "Complete body transformation program with expert coaching and personalized guidance.",
   emi: "EMI Available",
   features: [
@@ -37,44 +37,53 @@ const transformationPlan = {
     "Progress Tracking & Coaching Support",
   ],
 };
+
 const strengthPlans = [
   {
     name: "1 Month",
-    price: "₹999",
-    original: "₹1200",
+    price: "₹1200",
+    original: "₹1500",
   },
   {
     name: "3 Months",
-    price: "₹2499",
-    original: "₹3000",
+    price: "₹2999",
+    original: "₹3600",
   },
   {
     name: "6 Months",
-    price: "₹4999",
-    original: "₹6000",
+    price: "₹5499",
+    original: "₹7200",
   },
   {
     name: "1 Year",
-    price: "₹6999",
-    original: "₹12000",
+    price: "₹8000",
+    original: "₹14400",
   },
 ];
+
 const strengthCardioPlans = [
-  { name: "1 Month", price: "₹1200", original: "₹1500" },
-  { name: "3 Months", price: "₹3000", original: "₹3600" },
-  { name: "6 Months", price: "₹5999", original: "₹7200" },
-  { name: "1 Year", price: "₹8000", original: "₹14400" },
+  { name: "1 Month", price: "₹1500", original: "₹1700" },
+  { name: "3 Months", price: "₹3999", original: "₹4500" },
+  { name: "6 Months", price: "₹6499", original: "₹9000" },
+  { name: "1 Year", price: "₹9999", original: "₹18000" },
 ];
+
 const couplePlan = {
-  name: "Couple Fitness Plan",
-  price: "₹14,000",
-  original: "₹16,000",
+  name: "Couple Transformation Offer",
+  price: "₹16000",
+  original: "₹20000",
   desc: "Train together and stay motivated with our special couple membership offer.",
 };
+
 const personalTraining = {
   name: "Personal Training",
-  price: "₹5000",
+  price: "₹7000",
   desc: "26 days one-to-one personal training with expert fitness coach.",
+  package: {
+    name: "Transformation Package",
+    price: "₹18000",
+    duration: "3 Months",
+  },
 };
 const Membership = () => {
   return (

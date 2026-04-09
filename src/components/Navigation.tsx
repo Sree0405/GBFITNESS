@@ -41,7 +41,11 @@ const Navigation = () => {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-          <img src={gbLogo} className="min-w-5 max-w-8" alt="" />
+          <img
+            src={gbLogo}
+            className="min-w-5 max-w-8"
+            alt="GB Fitness Studio Avadi logo — gym in Avadi, Chennai"
+          />
             <span className="font-heading text-2xl font-bold tracking-wider text-foreground">
                 GB<span className="text-primary">FITNESS</span>
             </span>
